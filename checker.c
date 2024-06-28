@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
+#include <stdbool.h>
 
 bool battemp(float temperature){
  return (temperature >= 0 && temperature <=45);
