@@ -11,7 +11,7 @@ bool batsoc(float soc,float chargeRate){
   }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  return (battemp(temperature) || batsoc(soc,chargeRate);
+  return (battemp(temperature) || batsoc(soc,chargeRate));
 }
 
 int main() {
