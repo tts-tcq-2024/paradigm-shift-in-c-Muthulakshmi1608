@@ -6,16 +6,12 @@ bool battemp(float temperature){
  return (temperature >= 0 && temperature <=45);
   }
 
-bool batsoc(float soc){
-  return (soc>=20 && soc<=80);
+bool batsoc(float soc,float chargeRate){
+  return ((soc>=20 && soc<=80) || (chargeRate<=0.8));
   }
 
-bool batchargeRate(float chargeRate){
- return (chargeRate<=0.8);
-   }
-
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  return (battemp(temperature) || batsoc(soc) || batchargeRate(chargeRate));
+  return (battemp(temperature) || batsoc(soc,chargeRate);
 }
 
 int main() {
