@@ -8,9 +8,10 @@ bool range(float value, float lower_threshhold,float upper_threshhold){
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
  int flg=0;
+ bool a=((chargeRate > 0.8));
  flg=((range(temperature,0,45)));
  flg=flg+((range(soc,20,80)));
- flg=flg+ ((chargeRate > 0.8));
+ flg=flg+ a;
  if(flg>1)
  {
   return false;
