@@ -2,16 +2,17 @@
 #include <assert.h>
 #include <stdbool.h>
 
-bool battemp(float temperature){
- return (temperature >= 0 && temperature <=45);
-  }
+bool range(float value, float lower_threshhold,float upper_threshhold){
+ return((value < lower_threshhold) && (value > upper_threshhold));
+}
 
-bool batsoc(float soc,float chargeRate){
-  return ((soc>=20 && soc<=80) || (chargeRate<=0.8));
-  }
+bool chargeRange(float value, float upper_threshhold){
+ return(value > upper_threshhold);
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  return (battemp(temperature) || batsoc(soc,chargeRate));
+ bool a;
+ a=range(temperature,0,45) || (range(soc,20,80)) || (range(chargeRate,upper_threshhold));
+ return a;
 }
 
 int main() {
