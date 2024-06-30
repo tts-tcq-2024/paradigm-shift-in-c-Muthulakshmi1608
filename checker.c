@@ -11,7 +11,7 @@ bool chargeRange(float value, float upper_threshhold){
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
  bool a;
- a=range(temperature,0,45) || (range(soc,20,80)) || (range(chargeRate,upper_threshhold));
+ a=range(temperature,0,45) || (range(soc,20,80)) || (ChargeRange(chargeRate,upper_threshhold));
  return a;
 }
 
