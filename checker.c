@@ -3,15 +3,23 @@
 #include <stdbool.h>
 
 bool range(float value, float lower_threshhold,float upper_threshhold){
- return((value < lower_threshhold) && (value > upper_threshhold));
+ return((value < lower_threshhold) || (value > upper_threshhold));
 }
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
  int flg;
  float threshhold;
- flg=(!(range(temperature,0,45)));
- flg=flg+(!(range(soc,20,80)));
- flg=flg+ (!(chargeRate > 0.8));
+ flg=((range(temperature,0,45)));
+ flg=flg+((range(soc,20,80)));
+ flg=flg+ ((chargeRate > 0.8));
+ if(flg>1)
+ {
+  return 0;
+ }
+else
+{
+return 1;
+}
 }
 
 int main() {
