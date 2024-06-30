@@ -15,6 +15,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate) {
  if(flg>1)
  {
   return false;
+  printf("Battery is not OK");
  }
 else
 {
