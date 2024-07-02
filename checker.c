@@ -1,21 +1,29 @@
 #include <stdio.h>
 #include <assert.h>
+#include <stdbool.h>
+
+bool range(float value, float lower_threshhold,float upper_threshhold){
+ return((value < lower_threshhold) || (value > upper_threshhold));
+}
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  if(temperature < 0 || temperature > 45) {
-    printf("Temperature out of range!\n");
-    return 0;
-  } else if(soc < 20 || soc > 80) {
-    printf("State of Charge out of range!\n");
-    return 0;
-  } else if(chargeRate > 0.8) {
-    printf("Charge Rate out of range!\n");
-    return 0;
-  }
-  return 1;
+ int flg=0;
+ bool a=((chargeRate > 0.8));
+ flg=((range(temperature,0,45)));
+ flg=flg+((range(soc,20,80)));
+ flg=flg+ a;
+ if(flg>1)
+ {
+  return false;
+  printf("Battery is not OK");
+ }
+else
+{
+return true;
+}
 }
 
 int main() {
-  assert(batteryIsOk(25, 70, 0.7));
-  assert(!batteryIsOk(50, 85, 0));
+  assert(batteryIsOk(25, 70, 0.7)==true);
+  assert(!batteryIsOk(50, 85, 0)==true);
 }
