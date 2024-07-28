@@ -1,5 +1,3 @@
-#include<stdbool.h>
-bool out_of_range_flg = false;
 
 SOC_RANGE soc_ranges[] = {
     { 0, 20, "low_soc_breach" },
