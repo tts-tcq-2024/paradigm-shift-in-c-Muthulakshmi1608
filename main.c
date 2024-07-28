@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "soc_checker.h"
+#include "soc_status.h"
 #include "temperature_status.h"
 
 #define WARNING_SOC_CHECK TRUE
