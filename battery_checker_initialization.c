@@ -1,5 +1,3 @@
-#ifndef BATTERY_CHECKER_INITIALIZATION_H
-#define BATTERY_CHECKER_INITIALIZATION_H
 
 #include "soc_checker.h"
 #ifdef WARNING_SOC_CHECK
