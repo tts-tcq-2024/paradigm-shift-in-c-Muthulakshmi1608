@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <assert.h>
+#include<stdbool.h>
 #include "soc_checker.h"
+
+bool out_of_range_flg = false;
 
 int low_soc_breach()
 {
