@@ -1,5 +1,6 @@
 #include "soc_status.h"
 #include "temperature_status.h"
+#include "range_checking.h"
 
 int range_check(RANGE *limit_check, float value)
 {
