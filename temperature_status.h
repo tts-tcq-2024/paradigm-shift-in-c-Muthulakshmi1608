@@ -10,7 +10,7 @@ typedef struct {
 int get_soc_status(float soc);
 int low_temp_breach();
 int low_temp_warning();
-int normal();
+int temp_normal();
 int high_temp_warning();
 int high_temp_breach();
 #endif
