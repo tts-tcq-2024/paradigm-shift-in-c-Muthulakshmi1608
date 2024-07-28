@@ -1,5 +1,5 @@
 
-#include "soc_checker.h"
+#include "soc_status.h"
 #include "temperature_status.h"
 
 #ifdef WARNING_SOC_CHECK
