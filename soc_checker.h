@@ -1,5 +1,5 @@
 
-typedef struct {
+extern typedef struct {
     int lower_bound;
     int upper_bound;
     int *soc_ptr;
