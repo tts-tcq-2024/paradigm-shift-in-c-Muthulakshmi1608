@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "soc_checker.h"
+#include "soc_status.h"
 
 bool out_of_range_flg = true;
 
