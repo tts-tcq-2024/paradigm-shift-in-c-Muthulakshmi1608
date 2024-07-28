@@ -1,3 +1,4 @@
+#include <assert.h>
 #include "soc_checker.h"
 int batteryIsOk(float temperature, float soc, float chargeRate)
 {
