@@ -1,3 +1,4 @@
+#include<stdbool.h>
 bool out_of_range_flg = false;
 
 SOC_RANGE soc_ranges[] = {
