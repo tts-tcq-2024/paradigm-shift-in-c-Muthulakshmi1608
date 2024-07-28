@@ -37,7 +37,7 @@ int high_soc_breach()
   return out_of_range_flg;
 }
 
-int soc_range_check(SOC_RANGE *soc_limit_check, int soc)
+int soc_range_check(SOC_RANGE *soc_limit_check, float soc)
 {
   if ((soc >= soc_limit_check->lower_bound) && (soc <= soc_limit_check->upper_bound)) {
     return 1;
@@ -45,7 +45,7 @@ int soc_range_check(SOC_RANGE *soc_limit_check, int soc)
   return 0;
 }
 
-int get_soc_status(int soc) {
+int get_soc_status(float soc) {
   
     for (int i = 0; i < sizeof(soc_ranges) / sizeof(soc_ranges[0]); i++) {
        if(soc_range_check(&soc_ranges[i],soc)){
