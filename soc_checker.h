@@ -17,7 +17,7 @@ int high_soc_breach();
 int batteryIsOk(float temperature, float soc, float chargeRate);
 int soc_range_check(SOC_RANGE *soc_limit_check, float soc);
 
-SOC_RANGE soc_ranges[10];
+extern SOC_RANGE soc_ranges[10];
 
 
 #endif
