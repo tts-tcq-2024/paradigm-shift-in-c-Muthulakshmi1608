@@ -1,6 +1,7 @@
 
 #include "soc_status.h"
 #include "temperature_status.h"
+#include "range_checking.h"
 
 #ifdef WARNING_SOC_CHECK
 BATTERY_STATUS_RANGE ranges[] = {
