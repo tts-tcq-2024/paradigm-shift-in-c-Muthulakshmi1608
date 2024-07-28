@@ -2,12 +2,12 @@
 #include <stdbool.h>
 #include "soc_checker.h"
 
-bool out_of_range_flg = false;
+bool out_of_range_flg = true;
 
 int low_soc_breach()
 {
   printf("State of Charge out of range!\n");
-  out_of_range_flg = true;
+  out_of_range_flg = false;
   return out_of_range_flg;
 }
 
@@ -32,7 +32,7 @@ int high_soc_warning()
 int high_soc_breach()
 {
   printf("State of Charge out of range!\n");
-  out_of_range_flg = true;
+  out_of_range_flg = false;
   return out_of_range_flg;
 }
 
