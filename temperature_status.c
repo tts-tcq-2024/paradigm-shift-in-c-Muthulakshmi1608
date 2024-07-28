@@ -15,7 +15,7 @@ int low_soc_warning()
   return out_of_range_temp_flg;
 }
 
-int normal()
+int temp_normal()
 {
   printf("Temperature is normal");
   return out_of_range_temp_flg;
