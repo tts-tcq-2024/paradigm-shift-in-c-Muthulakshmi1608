@@ -1,5 +1,6 @@
 #include <assert.h>
 #include "soc_checker.h"
+#include "temperature_status.h"
 
 #define WARNING_SOC_CHECK TRUE
 int batteryIsOk(float temperature, float soc, float chargeRate)
