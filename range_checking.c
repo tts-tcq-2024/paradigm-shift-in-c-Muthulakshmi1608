@@ -2,7 +2,7 @@
 #include "temperature_status.h"
 #include "range_checking.h"
 
-int range_check(RANGE *limit_check, float value)
+int range_check(BATTERY_STATUS_RANGE *limit_check, float value)
 {
   if ((value >= limit_check->lower_bound) && (value <= limit_check->upper_bound)) {
     return 1;
