@@ -1,6 +1,6 @@
 
-#ifndef SOC_CHECKER_H
-#define SOC_CHECKER_H
+#ifndef SOC_STATUS_H
+#define SOC_STATUS_H
 
 typedef struct {
     int lower_bound;
