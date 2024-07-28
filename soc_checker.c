@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include <soc_checker.h>
+#include "soc_checker.h"
 
 int low_soc_breach()
 {
