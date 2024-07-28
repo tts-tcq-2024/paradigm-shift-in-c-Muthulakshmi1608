@@ -1,6 +1,9 @@
 #ifndef TEMPERATURE_STATUS_H
 #define TEMPERATURE_STATUS_H
 
+#include <stdio.h>
+#include <stdbool.h>
+
 typedef struct {
     int lower_bound;
     int upper_bound;
