@@ -49,7 +49,7 @@ int get_soc_status(float soc) {
   
     for (int i = 0; i < sizeof(soc_ranges) / sizeof(soc_ranges[0]); i++) {
        if(soc_range_check(&soc_ranges[i],soc)){
-            out_of_range_flg = soc_ranges[i].soc_ptr;
+            out_of_range_flg = soc_ranges[i].soc_ptr();
             return out_of_range_flg;
         }
     }
