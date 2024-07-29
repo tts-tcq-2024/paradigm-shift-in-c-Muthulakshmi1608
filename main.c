@@ -5,7 +5,7 @@
 #define WARNING_SOC_CHECK TRUE
 int batteryIsOk(float temperature, float soc, float chargeRate)
 {
-  return (get_soc_status(soc));
+  return (get_battery_status(soc));
 }
 
 int main() {
