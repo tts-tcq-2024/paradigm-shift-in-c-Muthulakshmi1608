@@ -9,7 +9,7 @@ int low_temp_breach()
   return out_of_range_temp_flg;
 }
 
-int low_soc_warning()
+int low_temp_warning()
 {
   printf("Warning: Approaching discharge\n");
   return out_of_range_temp_flg;
@@ -21,13 +21,13 @@ int temp_normal()
   return out_of_range_temp_flg;
 }
 
-int high_soc_warning()
+int high_temp_warning()
 {
   printf("Warning: Approaching charge-peak\n");
   return out_of_range_temp_flg;
 }
 
-int high_soc_breach()
+int high_temp_breach()
 {
   printf("Temperature out of range!\n");
   out_of_range_temp_flg = false;
