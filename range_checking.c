@@ -4,8 +4,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-bool out_of_battery_range_flg=true;
-
 int range_check(BATTERY_STATUS_RANGE *limit_check, float value)
 {
   if ((value >= limit_check->lower_bound) && (value <= limit_check->upper_bound)) {
@@ -17,8 +15,9 @@ int range_check(BATTERY_STATUS_RANGE *limit_check, float value)
 int get_battery_status(float value) {
     for (int i = 0; i < sizeof(ranges) / sizeof(ranges[0]); i++) {
        if(range_check(&ranges[i],value)){
-            out_of_battery_range_flg = ranges[i].battery_status_ptr();
-            return out_of_battery_range_flg;
+            return (ranges[i].battery_status_ptr());
+            
         }
     }
+  return 1;
 }
