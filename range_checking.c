@@ -14,7 +14,7 @@ int range_check(BATTERY_STATUS_RANGE *limit_check, float value)
 
 int chargerate_range_check(BATTERY_STATUS_RANGE_CHARGERATE *limit_check, float value)
 {
-  if ((value <= limit_check->upper_bound)) {
+  if ((value >= limit_check->lower_bound)&&(value <= limit_check->upper_bound)) {
     return 1;
   }
   return 0;
