@@ -15,10 +15,10 @@ BATTERY_STATUS_RANGE soc_ranges[] = {
 
 #ifdef WARNING_TEMP_CHECK
 BATTERY_STATUS_RANGE ranges[] = {
-    { 0.0, 20.0, low_temp_breach}, { 21.0, 24.0, low_temp_warning},{ 25.0, 75.0, temp_normal},{ 76.0, 80.0, high_temp_warning},{ 81.0, 100.0, high_temp_breach}
+    { -20.0, 0.0, low_temp_breach}, { 0.0, 2.25, low_temp_warning},{ 2.25, 42.75, temp_normal},{ 42.75, 45.0, high_temp_warning},{ 45.0, 100.0, high_temp_breach}
 };
 #else
 BATTERY_STATUS_RANGE ranges[] = {
-    { 0.0, 20.0, low_temp_breach},{ 25.0, 75.0, temp_normal},{ 81.0, 100.0, high_temp_breach}
+    { -20.0, 0.0, low_temp_breach},{ 2.25, 42.75, temp_normal},{ 45.0, 100.0, high_temp_breach}
 };
 #endif
