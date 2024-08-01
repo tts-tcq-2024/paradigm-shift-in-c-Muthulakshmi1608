@@ -2,12 +2,6 @@
 #ifndef SOC_STATUS_H
 #define SOC_STATUS_H
 
-//typedef struct {
-  //  int lower_bound;
-    //int upper_bound;
-    //int (*soc_ptr)();
-//} SOC_RANGE;
-
 
 int low_soc_breach();
 int low_soc_warning();
