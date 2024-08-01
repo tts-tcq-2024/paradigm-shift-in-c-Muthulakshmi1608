@@ -6,7 +6,7 @@ typedef struct {
     int (*battery_status_ptr)();
 } BATTERY_STATUS_RANGE;
 
-int get_battery_status(float value);
+int get_battery_status(float value,BATTERY_STATUS_RANGE ranges[], int size);
 int range_check(BATTERY_STATUS_RANGE *limit_check, float value);
 
 extern BATTERY_STATUS_RANGE ranges[10];
