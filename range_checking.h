@@ -7,6 +7,7 @@ typedef struct {
 } BATTERY_STATUS_RANGE;
 
 typedef struct {
+    int lower_bound;
     int upper_bound;
     int (*battery_status_chargerate_ptr)();
 } BATTERY_STATUS_RANGE_CHARGERATE;
