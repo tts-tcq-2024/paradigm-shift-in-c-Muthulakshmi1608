@@ -18,4 +18,5 @@ int chargerate_range_check(BATTERY_STATUS_RANGE_CHARGERATE *limit_check, float v
 
 extern BATTERY_STATUS_RANGE soc_ranges[10];
 extern BATTERY_STATUS_RANGE temp_ranges[10];
+extern BATTERY_STATUS_RANGE_CHARGERATE chargerate_ranges[10];
 #endif
