@@ -28,10 +28,10 @@ BATTERY_STATUS_RANGE temp_ranges[] = {
 
 BATTERY_STATUS_RANGE_CHARGERATE chargerate_ranges[] = {
 #ifdef WARNING_CHARGERATE_CHECK
-    { 0.0, 0.75, chargerate_normal},{ 0.76, 0.8, high_chargerate_warning},{ 0.8, 2.0, high_chargerate_breach}
+    { 0.00, 0.75, chargerate_normal},{ 0.76, 0.80, high_chargerate_warning},{ 0.80, 2.00, high_chargerate_breach}
 #else
 BATTERY_STATUS_RANGE_CHARGERATE chargerate_ranges[] = {
-    { 0.0, 0.75, chargerate_normal},{ 0.8, 2.0, high_chargerate_breach}
+    { 0.00, 0.75, chargerate_normal},{ 0.80, 2.00, high_chargerate_breach}
 #endif
 };
 
@@ -45,6 +45,6 @@ int batteryIsOk(float temperature, float soc, float chargeRate)
 }
 
 int main() {
-  assert(batteryIsOk(25, 70, 0.7)==true);
-  assert(!batteryIsOk(50, 85, 0)==true);
+  assert(batteryIsOk(25, 70, 0.70)==true);
+  assert(!batteryIsOk(50, 85, 0.00)==true);
 }
