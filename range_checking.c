@@ -20,6 +20,7 @@ int get_battery_status(float value) {
             
         }
     }
+  #endif
   #ifdef TEMP_CHECK
   for (int i = 0; i < sizeof(temp_ranges) / sizeof(temp_ranges[0]); i++) {
        if(range_check(&temp_ranges[i],value)){
