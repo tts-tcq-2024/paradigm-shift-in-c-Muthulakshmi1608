@@ -6,7 +6,6 @@
 int low_soc_breach()
 {
   printf("State of Charge out of range!\n");
-  out_of_range_flg = false;
   return 1;
 }
 
