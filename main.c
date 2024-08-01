@@ -26,11 +26,11 @@ BATTERY_STATUS_RANGE temp_ranges[] = {
 #endif
 };
 
-BATTERY_STATUS_RANGE chargerate_ranges[] = {
+BATTERY_STATUS_RANGE_CHARGERATE chargerate_ranges[] = {
 #ifdef WARNING_CHARGERATE_CHECK
     { 0.0, 0.04, chargerate_normal},{ 0.05, 0.08, high_chargerate_warning},{ 0.08, 2.0, high_chargerate_breach}
 #else
-BATTERY_STATUS_RANGE chargerate_ranges[] = {
+BATTERY_STATUS_RANGE_CHARGERATE chargerate_ranges[] = {
     { 0.0, 0.04, chargerate_normal},{ 0.08, 2.0, high_chargerate_breach}
 #endif
 };
