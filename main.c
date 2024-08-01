@@ -4,11 +4,12 @@
 
 #define WARNING_SOC_CHECK TRUE
 #define WARNING_TEMP_CHECK TRUE
-#define SOC_CHECK TRUE
-#define TEMP_CHECK TRUE
+
 int batteryIsOk(float temperature, float soc, float chargeRate)
 {
-  return (get_battery_status(soc) && get_battery_status(temperature));
+  int soc_status = get_battery_status(soc, soc_ranges, sizeof(soc_ranges) / sizeof(soc_ranges[0]));
+  int temp_status = get_battery_status(temperature, temp_ranges, sizeof(temp_ranges) / sizeof(temp_ranges[0]));
+  return (soc_status && temp_status);
 }
 
 int main() {
