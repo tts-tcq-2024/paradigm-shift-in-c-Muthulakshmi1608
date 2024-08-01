@@ -12,21 +12,10 @@ int range_check(BATTERY_STATUS_RANGE *limit_check, float value)
   return 0;
 }
 
-int get_battery_status(float value) {
-  #ifdef SOC_CHECK
-    for (int i = 0; i < sizeof(ranges) / sizeof(ranges[0]); i++) {
-       if(range_check(&ranges[i],value)){
-            return (ranges[i].battery_status_ptr());
-            
+int get_battery_status(float value,BATTERY_STATUS_RANGE ranges[], int size) {
+    for (int i = 0; i < size; i++) {
+        if (range_check(&ranges[i], value)) {
+            return ranges[i].battery_status_ptr();
         }
     }
-  #endif
-  #ifdef TEMP_CHECK
-  for (int i = 0; i < sizeof(temp_ranges) / sizeof(temp_ranges[0]); i++) {
-       if(range_check(&temp_ranges[i],value)){
-            return (temp_ranges[i].battery_status_ptr());
-            
-        }
-    }
-  #endif
 }
