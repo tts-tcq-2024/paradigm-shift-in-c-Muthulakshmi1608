@@ -26,7 +26,7 @@ BATTERY_STATUS_RANGE temp_ranges[] = {
 #endif
 };
 
-BATTERY_STATUS_RANGE_CHARGERATE chargerate_ranges[] = {
+BATTERY_STATUS_RANGE chargerate_ranges[] = {
 #ifdef WARNING_CHARGERATE_CHECK
     { 0.00, 0.75, chargerate_normal},{ 0.76, 0.80, high_chargerate_warning},{ 0.80, 2.00, high_chargerate_breach}
 #else
@@ -40,7 +40,7 @@ int batteryIsOk(float temperature, float soc, float chargeRate)
 {
   int soc_status = get_battery_status(soc, soc_ranges, sizeof(soc_ranges) / sizeof(soc_ranges[0]));
   int temp_status = get_battery_status(temperature, temp_ranges, sizeof(temp_ranges) / sizeof(temp_ranges[0]));
-  int chargerate_status = get_battery_chargerate_status(chargeRate, chargerate_ranges, sizeof(chargerate_ranges) / sizeof(chargerate_ranges[0]));
+  int chargerate_status = get_battery_status(chargeRate, chargerate_ranges, sizeof(chargerate_ranges) / sizeof(chargerate_ranges[0]));
   return (soc_status && temp_status && chargerate_status);
 }
 
