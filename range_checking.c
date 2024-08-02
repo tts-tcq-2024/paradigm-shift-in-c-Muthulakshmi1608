@@ -1,6 +1,7 @@
 #include "soc_status.h"
 #include "temperature_status.h"
 #include "range_checking.h"
+#include "chargerate_status.h"
 #include <stdio.h>
 #include <stdbool.h>
 
