@@ -21,7 +21,6 @@ BATTERY_STATUS_RANGE temp_ranges[] = {
 #ifdef WARNING_TEMP_CHECK
     { -20.0, 0.0, low_temp_breach}, { 0.0, 2.25, low_temp_warning},{ 2.25, 42.75, temp_normal},{ 42.75, 45.0, high_temp_warning},{ 45.0, 100.0, high_temp_breach}
 #else
-BATTERY_STATUS_RANGE temp_ranges[] = {
     { -20.0, 0.0, low_temp_breach},{ 2.25, 42.75, temp_normal},{ 45.0, 100.0, high_temp_breach}
 #endif
 };
@@ -30,7 +29,6 @@ BATTERY_STATUS_RANGE chargerate_ranges[] = {
 #ifdef WARNING_CHARGERATE_CHECK
     { 0.00, 0.75, chargerate_normal},{ 0.76, 0.80, high_chargerate_warning},{ 0.80, 2.00, high_chargerate_breach}
 #else
-BATTERY_STATUS_RANGE chargerate_ranges[] = {
     { 0.00, 0.75, chargerate_normal},{ 0.80, 2.00, high_chargerate_breach}
 #endif
 };
