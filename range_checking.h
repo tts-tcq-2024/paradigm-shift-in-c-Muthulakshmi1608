@@ -1,8 +1,8 @@
 #ifndef RANGE_CHECKING_H
 #define RANGE_CHECKING_H
 typedef struct {
-    int lower_bound;
-    int upper_bound;
+    float lower_bound;
+    float upper_bound;
     int (*battery_status_ptr)();
 } BATTERY_STATUS_RANGE;
 
