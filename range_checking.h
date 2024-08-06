@@ -3,7 +3,8 @@
 typedef struct {
     float lower_bound;
     float upper_bound;
-    int (*battery_status_ptr)();
+    char* message;
+    int status 
 } BATTERY_STATUS_RANGE;
 
 
