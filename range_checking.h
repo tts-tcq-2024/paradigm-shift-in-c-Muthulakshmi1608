@@ -4,9 +4,14 @@ typedef struct {
     float lower_bound;
     float upper_bound;
     char* message;
-    int status;
-} BATTERY_STATUS_RANGE;
+    int value;
+} Battery_Status_Range;
 
+typedef struct{
+  char* name;
+  BATTERY_STATUS_RANGE ranges[10];
+  bool isEarlyWarningRequired;
+}BatteryParameter;
 
 
 int get_battery_status(float value,BATTERY_STATUS_RANGE ranges[], int size);
