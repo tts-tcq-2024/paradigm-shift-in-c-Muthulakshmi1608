@@ -10,7 +10,7 @@ void add_soc_parameter(BatteryParameter *bp) {
     bp->ranges[3] = (Battery_Status_Range){76.0, 80.0, "Warning: Approaching charge-peak", 1};
     bp->ranges[4] = (Battery_Status_Range){81.0, 100.0, "State of Charge out of range!", 0};
     
-    bp->isEarlyWarningRequired = false;  // Set early warning flag to false for testing
+    bp->isEarlyWarningRequired = true;  // Set early warning flag to false for testing
 }
 void add_temp_parameter(BatteryParameter *temp_bp) {
     strcpy(temp_bp->name, "temperature");  // Properly copying the string to the char array
@@ -21,7 +21,7 @@ void add_temp_parameter(BatteryParameter *temp_bp) {
     temp_bp->ranges[3] = (Battery_Status_Range){42.76, 45, "Warning: Approaching charge-peak", 1};
     temp_bp->ranges[4] = (Battery_Status_Range){46, 100.0, "Temperature out of range!", 0};
     
-    temp_bp->isEarlyWarningRequired = false;  // Set early warning flag to false for testing
+    temp_bp->isEarlyWarningRequired = true;  // Set early warning flag to false for testing
 }
 void add_charge_parameter(BatteryParameter *charge_bp) {
     strcpy(charge_bp->name, "chargerate");  // Properly copying the string to the char array
@@ -30,7 +30,7 @@ void add_charge_parameter(BatteryParameter *charge_bp) {
     charge_bp->ranges[1] = (Battery_Status_Range){0.76,0.80, "Warning: Approaching charge-peak", 1};
     charge_bp->ranges[2] = (Battery_Status_Range){0.90, 2.00, "chargerate is out of range!", 3};
     
-    charge_bp->isEarlyWarningRequired = false;  // Set early warning flag to false for testing
+    charge_bp->isEarlyWarningRequired = true;  // Set early warning flag to false for testing
 }
 int batteryIsOk(float temperature, float soc, float chargeRate)
 {
