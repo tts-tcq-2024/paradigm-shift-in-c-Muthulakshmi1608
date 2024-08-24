@@ -37,9 +37,9 @@ int batteryIsOk(float temperature, float soc, float chargeRate)
  add_soc_parameter(&bp);
  add_temp_parameter(&temp_bp);
  add_charge_parameter(&charge_bp);
-  int soc_status = get_battery_status(soc, soc_ranges, sizeof(soc_ranges) / sizeof(soc_ranges[0]));
-  int temp_status = get_battery_status(temperature, temp_ranges, sizeof(temp_ranges) / sizeof(temp_ranges[0]));
-  int chargerate_status = get_battery_status(chargeRate, chargerate_ranges, sizeof(chargerate_ranges) / sizeof(chargerate_ranges[0]));
+  int soc_status = get_battery_status(soc, &bp, sizeof(bp.ranges) / sizeof(bp.ranges[0]));
+  int temp_status = get_battery_status(temperature, &temp_bp, sizeof(temp_bp.ranges) / sizeof(temp_bp.ranges[0]));
+  int chargerate_status = get_battery_status(chargeRate, &charge_bp, sizeof(charge_bp.ranges) / sizeof(charge_bp.ranges[0]));
   return (soc_status && temp_status && chargerate_status);
 }
 
