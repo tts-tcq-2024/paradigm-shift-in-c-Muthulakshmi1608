@@ -14,5 +14,5 @@ typedef struct{
 }BatteryParameter;
 
 
-int get_battery_status(float value,BATTERY_STATUS_RANGE ranges[], int size);
+int get_battery_status(float value,Battery_Status_Range ranges[], int size);
 #endif
