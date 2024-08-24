@@ -34,6 +34,7 @@ void add_charge_parameter(BatteryParameter *charge_bp) {
 }
 int batteryIsOk(float temperature, float soc, float chargeRate)
 {
+ BatteryParameter bp,temp_bp,charge_bp;
  add_soc_parameter(&bp);
  add_temp_parameter(&temp_bp);
  add_charge_parameter(&charge_bp);
