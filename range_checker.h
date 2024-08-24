@@ -9,7 +9,7 @@ typedef struct {
 
 typedef struct{
   char* name;
-  BATTERY_STATUS_RANGE ranges[10];
+  Battery_Status_Range ranges[10];
   bool isEarlyWarningRequired;
 }BatteryParameter;
 
