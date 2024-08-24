@@ -1,5 +1,6 @@
 #ifndef RANGE_CHECKER_H
 #define RANGE_CHECKER_H
+#include <stdbool.h>
 typedef struct {
     float lower_bound;
     float upper_bound;
@@ -14,5 +15,5 @@ typedef struct{
 }BatteryParameter;
 
 
-int get_battery_status(float value,Battery_Status_Range ranges[], int size);
+int get_battery_status(float value,BatteryParameter *bp, int size);
 #endif
