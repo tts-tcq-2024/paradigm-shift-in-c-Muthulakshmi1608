@@ -26,13 +26,13 @@ void add_temp_parameter(BatteryParameter *temp_bp) {
 void add_charge_parameter(BatteryParameter *charge_bp) {
     strcpy(charge_bp->name, "chargerate");  // Properly copying the string to the char array
     
-    charge_bp->ranges[0] = (Battery_Status_Range){0, 0.75, "chargerate normal!", 0};
+    charge_bp->ranges[0] = (Battery_Status_Range){0, 0.75, "chargerate normal!", 3};
     charge_bp->ranges[1] = (Battery_Status_Range){0.76,0.80, "Warning: Approaching charge-peak", 1};
-    charge_bp->ranges[2] = (Battery_Status_Range){0.90, 2.00, "chargerate is out of range!", 3};
+    charge_bp->ranges[2] = (Battery_Status_Range){0.90, 2.00, "chargerate is out of range!", 0};
     
     charge_bp->isEarlyWarningRequired = true;  // Set early warning flag to false for testing
 }
-int batteryIsOk(float temperature, float soc, float chargeRate)
+bool batteryIsOk(float temperature, float soc, float chargeRate)
 {
  BatteryParameter bp,temp_bp,charge_bp;
  add_soc_parameter(&bp);
