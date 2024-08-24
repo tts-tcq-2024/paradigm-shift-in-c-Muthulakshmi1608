@@ -1,5 +1,5 @@
-#ifndef RANGE_CHECKING_H
-#define RANGE_CHECKING_H
+#ifndef RANGE_CHECKER_H
+#define RANGE_CHECKER_H
 typedef struct {
     float lower_bound;
     float upper_bound;
