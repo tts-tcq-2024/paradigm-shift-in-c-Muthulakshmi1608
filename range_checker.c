@@ -1,4 +1,4 @@
-#include "range_checking.h"
+#include "range_checker.h"
 #include <stdio.h>
 #include <stdbool.h>
 
