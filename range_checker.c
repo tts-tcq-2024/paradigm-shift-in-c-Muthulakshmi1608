@@ -42,7 +42,7 @@ int get_battery_status(float value, BatteryParameter *bp, int size) {
             return status;  // Return the matching range's value
         }
     }
-    printf("%s\n", filtered_ranges[i-1].message);
+    printf("%s\n", filtered_ranges[i].message);
     return 0;  // Return 0 if no range matched
 }
 
