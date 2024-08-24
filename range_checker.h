@@ -4,7 +4,7 @@
 typedef struct {
     float lower_bound;
     float upper_bound;
-    char* message;
+    char message[100];
     int value;
 } Battery_Status_Range;
 
