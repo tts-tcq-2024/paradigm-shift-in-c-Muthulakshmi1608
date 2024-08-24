@@ -1,5 +1,5 @@
 #include <assert.h>
-#include "range_checking.h"
+#include "range_checker.h"
 
 void add_soc_parameter(BatteryParameter *bp) {
     strcpy(bp->name, "soc");  // Properly copying the string to the char array
