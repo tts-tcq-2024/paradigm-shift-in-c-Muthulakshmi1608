@@ -47,9 +47,10 @@ bool batteryIsOk(float temperature, float soc, float chargeRate)
 
 int main() {
  
-  testBatteryNormal();
+  
   testchargerateNormal();
   testbatterywarning();
   testtemperaturewarning();
+  testBatteryNormal();
   return 0;
 }
