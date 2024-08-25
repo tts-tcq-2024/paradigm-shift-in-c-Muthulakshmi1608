@@ -2,8 +2,5 @@
 #define TESTCASES_H
 
 void testBatteryNormal();
-void testchargerateNormal();
 void testbatterywarning();
-void testtemperaturewarning();
-
 #endif
