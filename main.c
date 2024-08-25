@@ -1,5 +1,6 @@
 #include <assert.h>
 #include "range_checker.h"
+#include "Testcases.h"
 
 void add_soc_parameter(BatteryParameter *bp) {
     strcpy(bp->name, "soc");  // Properly copying the string to the char array
@@ -45,8 +46,10 @@ bool batteryIsOk(float temperature, float soc, float chargeRate)
 }
 
 int main() {
-  assert(batteryIsOk(25, 70, 0.70)==true);// Normal
-  assert(!batteryIsOk(50, 85, 0.00)==true);// SOC and temp outofrange,chargerate normal
-  assert(batteryIsOk(1, 77, 0.77));//Warning
-  assert(!batteryIsOk(10, 50, 0.9));// chargerate outofrange,SOC and temp normal
+ 
+  testBatteryNormal();
+  testchargerateNormal();
+  testbatterywarning();
+  testtemperaturewarning();
+  return 0;
 }
