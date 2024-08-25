@@ -7,7 +7,7 @@ void testchargerateNormal() {
 }
 
 void testbatterywarning() {
-    assert(batteryIsOk(1, 77, 0.77));
+    assert(batteryIsOk(2, 78, 0.78));
 }
 
 void testtemperaturewarning() {
