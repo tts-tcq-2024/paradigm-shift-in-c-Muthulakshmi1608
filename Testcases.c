@@ -3,7 +3,7 @@
 #include "Testcases.h"
 
 void testBatteryNormal() {
-    assert(batteryIsOk(25, 70, 0.70)==true));
+    assert(batteryIsOk(25, 70, 0.70)==true);
 }
 
 void testchargerateNormal() {
@@ -15,5 +15,5 @@ void testbatterywarning() {
 }
 
 void testtemperaturewarning() {
-   assert(!batteryIsOk(10, 50, 0.9)));
+   assert(!batteryIsOk(10, 50, 0.9));
 }
